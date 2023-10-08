@@ -2,12 +2,18 @@ _This is just a suggested template for the README of your project, feel free to 
 # \[Project Title\]
 
 ### Team Members
-- Name 1 (Project Lead)
-- Name 2
-- Name 3
+- Jack Archibal
+- Jared Reiss-Lavoie
+- Jacob Larsen
+- Matthew Gehrt
 
 ### Project Description
-Describe the goal of your project here.
+DIFFERENT IDEAS - CHROME EXTENSIONS
+-BIONIC READING CHROME EXTENSION
+-ARTICLE SUMMARIZER CHROME EXTENSION
+
+
+FEEL FREE TO COME UP WITH IDEAS OTHER THAN CHROME EXTENSIONS
 
 ### Built With
 - List any languages, frameworks, tools, etc. that your project uses here
