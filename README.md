@@ -2,10 +2,11 @@ _This is just a suggested template for the README of your project, feel free to 
 # \[Project Title\]
 
 ### Team Members
-- Jack Archibal
+- Jack Archibald
 - Jared Reiss-Lavoie
 - Jacob Larsen
 - Matthew Gehrt
+- Bao Xiong
 
 ### Project Description
 DIFFERENT IDEAS - CHROME EXTENSIONS
