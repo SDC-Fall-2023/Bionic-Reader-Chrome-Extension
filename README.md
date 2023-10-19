@@ -1,4 +1,3 @@
-_This is just a suggested template for the README of your project, feel free to modify this as you wish_
 # Bionic Reader: Transforming Articles into Effortless Reading 
 
 ### Team Members
