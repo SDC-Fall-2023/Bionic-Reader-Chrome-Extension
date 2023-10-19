@@ -1,5 +1,5 @@
 _This is just a suggested template for the README of your project, feel free to modify this as you wish_
-# \[Project Title\]
+# Bionic Reader: Transforming Articles into Effortless Reading 
 
 ### Team Members
 - Jack Archibald
@@ -9,17 +9,10 @@ _This is just a suggested template for the README of your project, feel free to 
 - Bao Xiong
 
 ### Project Description
-DIFFERENT IDEAS - CHROME EXTENSIONS
--BIONIC READING CHROME EXTENSION
--ARTICLE SUMMARIZER CHROME EXTENSION
-
-Poker Tower Defense
-
-
-FEEL FREE TO COME UP WITH IDEAS OTHER THAN CHROME EXTENSIONS
+Bionic Reader is a Chrome extension designed to revolutionize your online reading experience. The Bionic Reader will transform text by bolding the most concise parts to help guide over text much quicker. Say goodbye to endless scrolling, eye strain, and the frustration of sifting through cluttered web pages. Bionic Reader is your gateway to a new world of effortless and immersive reading.
 
 ### Built With
-- List any languages, frameworks, tools, etc. that your project uses here
+Plasmo? JavaScript //update later once complete
 
 ## Getting Started
 This is where you give instructions on how to run your project
