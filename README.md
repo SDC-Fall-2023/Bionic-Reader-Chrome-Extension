@@ -10,6 +10,9 @@
 ### Project Description
 Bionic Reader is a Chrome extension designed to revolutionize your online reading experience. The Bionic Reader will transform text by bolding the most concise parts to help guide your eyes over text. Say goodbye to endless scrolling, eye strain, and the frustration of sifting through cluttered web pages. Bionic Reader is your gateway to a new world of effortless and immersive reading.
 
+### Project Sketch
+![UI Sketch](UI_Sketch.png)
+
 ### Built With
 Plasmo? JavaScript //update later once complete
 
