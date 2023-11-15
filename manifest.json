@@ -1,11 +1,11 @@
 {
-    "name": "Covid-19 Stats UK",
-    "version": "1.0.0",
-    "description": "latest covid data of UK",
-    "manifest_version": 3,
-    "author": "Sampurna Chapagain",
-    "action":{
-        "default_popup": "index.html",
-        "default_title": "Latest Covid Report"
-    }
+  "name": "Bionic Reader",
+  "version": "1.0.0",
+  "description": "Bionic Reader is a Chrome extension designed to revolutionize your online reading experience",
+  "manifest_version": 3,
+  "author": "Jack Archibald, Jared Reiss-Lavoie, Jacob Larsen, Bao Xiong, Matthew Gehrt",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Bionic Reader"
+  }
 }

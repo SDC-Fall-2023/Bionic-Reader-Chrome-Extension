@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var toggleBtn = document.getElementById("toggleBtn");
 
     if (bionicReaderEnabled) {
-      toggleBtn.textContent = "Bionic Text: ON";
+      toggleBtn.textContent = "ON";
       // Add logic to enable Bionic Reader functionality here
     } else {
-      toggleBtn.textContent = "Bionic Text: OFF";
+      toggleBtn.textContent = "OFF";
       // Add logic to disable Bionic Reader functionality here
     }
   }
@@ -26,4 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("textColorPicker")
     .addEventListener("input", handleTextColorChange);
+
+  // Add click event listener to the Search button for dictionary search
+  document
+    .getElementById("searchButton")
+    .addEventListener("click", handleDictionarySearch);
 });

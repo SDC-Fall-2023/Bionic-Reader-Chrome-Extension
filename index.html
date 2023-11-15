@@ -13,8 +13,9 @@
       <h2 class="text-center">Bionic Reader Extension</h2>
 
       <!-- Bionic Text Button -->
-      <div class="text-center">
-        <button id="toggleBtn" class="btn btn-primary">Bionic Text: OFF</button>
+      <div class="text-center mt-3">
+        <h3>Bionic Text</h3>
+        <button id="toggleBtn" class="btn btn-primary">OFF</button>
       </div>
 
       <!-- Themes -->
@@ -28,6 +29,29 @@
           <label for="textColorPicker">Text Color:</label>
           <input type="color" id="textColorPicker" value="#000000" />
         </div>
+      </div>
+    </div>
+
+    <!-- Dictionary Input Box -->
+    <div class="mt-3 text-center">
+      <h3>Dictionary</h3>
+      <div class="input-group mb-3 mx-auto" style="max-width: 200px">
+        <label for="dictionaryInput" class="visually-hidden"
+          >Enter a Word:</label
+        >
+        <textarea
+          id="dictionaryInput"
+          class="form-control"
+          rows="1"
+          placeholder="Enter a word"
+        ></textarea>
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          id="searchButton"
+        >
+          Search
+        </button>
       </div>
     </div>
 
