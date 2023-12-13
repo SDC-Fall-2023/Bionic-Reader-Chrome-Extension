@@ -22,10 +22,44 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add input event listeners to color pickers
   document
     .getElementById("backgroundColorPicker")
-    .addEventListener("input", handleBackgroundColorChange);
+    .addEventListener('input', (event) => {
+      const color = event.target.value;
+    
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        chrome.scripting.executeScript({
+          target: { tabId: tabs[0].id },
+          args: [color],
+          func: setColor
+        });
+      });
+    });
+
+  function setColor(color) {
+    document.body.style.backgroundColor = color;
+
+  }
+
   document
     .getElementById("textColorPicker")
-    .addEventListener("input", handleTextColorChange);
+    .addEventListener('input', (event) => {
+      const color = event.target.value;
+    
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        chrome.scripting.executeScript({
+          target: { tabId: tabs[0].id },
+          args: [color],
+          func: setTextColor
+        });
+      });
+    });
+
+  function setTextColor(color) {
+    var eles = document.getElementsByTagName("*");
+    for (var i=0; i < eles.length; i++) 
+    {    
+        eles[i].style.color = color;
+    }
+  }
 
   // Add click event listener to the Search button for dictionary search
   document
