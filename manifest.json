@@ -2,6 +2,7 @@
   "name": "Bionic Reader",
   "version": "1.0.0",
   "description": "Bionic Reader is a Chrome extension designed to revolutionize your online reading experience",
+  "permissions": ["activeTab", "scripting"],
   "manifest_version": 3,
   "author": "Jack Archibald, Jared Reiss-Lavoie, Jacob Larsen, Bao Xiong, Matthew Gehrt",
   "action": {
