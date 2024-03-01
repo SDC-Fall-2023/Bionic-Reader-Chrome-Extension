@@ -8,5 +8,12 @@
   "action": {
     "default_popup": "index.html",
     "default_title": "Bionic Reader"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
 }
