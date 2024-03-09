@@ -1,49 +1,47 @@
-(function () {
-  // Function to toggle Bionic Reading on the page
-  function applyBionicReading() {
-    document
-      .querySelectorAll("p, h1, h2, h3, h4, h5, h6, span")
-      .forEach((element) => {
-        // Skip if the element is a hyperlink or within a hyperlink
-        if (element.tagName === "A" || element.closest("a")) {
-          return;
-        }
+function processTextNode(node) {
+  const processedText = node.textContent
+    .split(" ")
+    .map((word) => {
+      const midpoint = Math.floor(word.length / 2);
+      const firstHalf = `<strong>${word.slice(0, midpoint)}</strong>`;
+      const secondHalf = `${word.slice(midpoint)}`;
+      return `${firstHalf}${secondHalf}`;
+    })
+    .join(" ");
+  return processedText;
+}
 
-        if (element.hasAttribute("data-original-text")) {
-          // Revert to original text if already processed
-          element.innerHTML = element.getAttribute("data-original-text");
-          element.removeAttribute("data-original-text");
-        } else {
-          // Apply Bionic Reading
-          element.setAttribute("data-original-text", element.innerHTML);
-          const modifiedHtml = element.innerHTML.replace(
-            /\b(\w+)\b/g,
-            (match) => {
-              const mid = Math.ceil(match.length / 2);
-              // Skip over non-word characters and hyperlinks
-              if (!match.match(/^\w+$/)) {
-                return match; // Return the original string if it contains special characters
-              }
-              return `<span><strong>${match.substring(
-                0,
-                mid
-              )}</strong>${match.substring(mid)}</span>`;
-            }
-          );
-          element.innerHTML = modifiedHtml;
+function applyBionicReading() {
+  document
+    .querySelectorAll("p, h1, h2, h3, h4, h5, h6, span")
+    .forEach((element) => {
+      if (element.tagName === "A" || element.closest("a")) {
+        return; // Skip hyperlinks
+      }
+      Array.from(element.childNodes).forEach((node) => {
+        if (node.nodeType === 3 && node.textContent.trim().length > 0) {
+          // Node is a text node and not just whitespace
+          const span = document.createElement("span");
+          span.innerHTML = processTextNode(node);
+          node.replaceWith(span);
         }
       });
-  }
+    });
+}
 
-  // Listen for messages from the extension
-  chrome.runtime.onMessage.addListener(function (
-    request,
-    sender,
-    sendResponse
-  ) {
-    if (request.action === "toggleBionicReading") {
-      applyBionicReading();
-      sendResponse({ status: "Bionic Reading toggled" });
+let isBionicEnabled = false; // Tracks the state of the Bionic Reading effect
+
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  if (request.action === "toggleBionicReading") {
+    isBionicEnabled = !isBionicEnabled; // Toggle state
+    if (isBionicEnabled) {
+      applyBionicReading(); // Apply effect
+    } else {
+      // Reload the page or undo the bionic reading effect, based on your implementation preference
+      window.location.reload();
+      // Note: Reloading the page is a simple way to undo changes but might not be ideal for user experience.
+      // Consider a more refined approach for reverting text modifications.
     }
-  });
-})();
+    sendResponse({ status: "Bionic Reading toggled" });
+  }
+});
