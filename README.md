@@ -14,32 +14,19 @@ Bionic Reader is a Chrome extension designed to revolutionize your online readin
 ![Bionic Text Example](BionicExample.gif)
 
 ## Getting Started
-This is where you give instructions on how to run your project
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+There are no prerequisites
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/jackabald/Bionic-Reader-Chrome-Extension.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-## Demo
-If your app is hosted on a published website, include the link here
+2. Open Google Chrome and navigate to 'Manage Extensions'
+3. In the upper right corner make sure you have entered 'Developer Mode'
+4. Click 'Load unpacked'
+5. Navigate through your files to the cloned repo and select
+6. Enjoy effortless reading!
