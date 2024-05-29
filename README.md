@@ -1,7 +1,7 @@
 # Bionic Reader: Transforming Articles into Effortless Reading 
 
 ### Team Members
-- Jack Archibald
+- Jack Archibald (Project Lead)
 - Jared Reiss-Lavoie
 - Jacob Larsen
 - Matthew Gehrt
